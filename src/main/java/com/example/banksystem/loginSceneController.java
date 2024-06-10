@@ -80,7 +80,7 @@ public class loginSceneController {
 
     private void loadNewScene(ActionEvent event) {
         try {
-            Parent newSceneRoot = FXMLLoader.load(getClass().getResource("mainScene.fxml")); // Replace "mainScene.fxml" with your FXML file
+            Parent newSceneRoot = FXMLLoader.load(getClass().getResource("mainScene.fxml"));
             Scene newScene = new Scene(newSceneRoot, 420, 420);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setScene(newScene);
