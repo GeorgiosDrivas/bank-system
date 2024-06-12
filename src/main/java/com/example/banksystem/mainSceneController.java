@@ -3,7 +3,12 @@ package com.example.banksystem;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -23,11 +28,29 @@ public class mainSceneController {
     }
 
     public void deposit (ActionEvent event) throws IOException {
-        Deposit deposit = new Deposit();
-        try {
-            deposit.deposit(event);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Parent newSceneRoot = FXMLLoader.load(getClass().getResource("deposit.fxml"));
+        Scene newScene = new Scene(newSceneRoot, 420, 420);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(newScene);
+        window.setTitle("Banking System - Deposit");
+        window.show();
+    }
+
+    public void withdraw (ActionEvent event) throws IOException {
+        Parent newSceneRoot = FXMLLoader.load(getClass().getResource("withdraw.fxml"));
+        Scene newScene = new Scene(newSceneRoot, 420, 420);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(newScene);
+        window.setTitle("Banking System - Withdraw");
+        window.show();
+    }
+
+    public void requestLoan (ActionEvent event) throws IOException {
+        Parent newSceneRoot = FXMLLoader.load(getClass().getResource("requestLoan.fxml"));
+        Scene newScene = new Scene(newSceneRoot, 420, 420);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(newScene);
+        window.setTitle("Banking System - Request Loan");
+        window.show();
     }
 }

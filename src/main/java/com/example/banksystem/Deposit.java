@@ -20,16 +20,6 @@ public class Deposit {
     @FXML
     private TextField depositField;
 
-    public  void deposit(ActionEvent event) throws IOException {
-
-        Parent newSceneRoot = FXMLLoader.load(getClass().getResource("deposit.fxml"));
-        Scene newScene = new Scene(newSceneRoot, 420, 420);
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(newScene);
-        window.setTitle("Banking System");
-        window.show();
-    }
-
     public void confirmDeposit(ActionEvent event) throws SQLException, IOException {
         String id = userData.getUserId();
         int currBalance = userData.getUserBalance();
