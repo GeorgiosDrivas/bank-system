@@ -15,5 +15,6 @@
       </Label>
       <TextField fx:id="depositField" maxWidth="150.0" />
       <Button mnemonicParsing="false" onAction="#confirmDeposit" text="Deposit" />
+      <Button mnemonicParsing="false" onAction="#backFunctionality" text="Back" />
    </children>
 </VBox>

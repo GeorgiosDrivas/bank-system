@@ -60,4 +60,13 @@ public class requestLoan {
                 }
             }
     }
+
+    public void backFunctionality(ActionEvent event) throws IOException {
+        Parent newSceneRoot = FXMLLoader.load(getClass().getResource("mainScene.fxml"));
+        Scene newScene = new Scene(newSceneRoot, 420, 420);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(newScene);
+        window.setTitle("Banking System");
+        window.show();
+    }
 }

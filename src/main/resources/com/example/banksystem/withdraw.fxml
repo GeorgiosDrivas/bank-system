@@ -16,5 +16,6 @@
         <TextField fx:id="withdrawField" maxWidth="150.0" />
       <Label fx:id="limitLabel" />
       <Button fx:id="withdrawButton" mnemonicParsing="false" onAction="#confirmWithdraw" text="Withdraw" />
+      <Button mnemonicParsing="false" onAction="#backFunctionality" text="Back" />
     </children>
 </VBox>
